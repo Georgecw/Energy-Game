@@ -1,8 +1,9 @@
 class  Energy():
 
     def __init__(self):
-        self.e_list = {'water':[9,2,0,0],'wind':[11,2,0,0],
-                  'He':[6,30,3,1],'ice':[8,4,1,1],'sun':[9,3,0,1]}
+        self.e_list = {"water":[15,9,0,0],"sea":[8,6,0,0],
+                        "He":[12,36,8,1],"ice":[4,8,1,1],"creature":[1,1,2,1],
+                        "oil":[5,10,2,1],"coal":[2,2,3,1]}
         self.built_list = {}
 
     def build_energy(self):
