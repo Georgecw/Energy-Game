@@ -2,12 +2,12 @@ from Country import Country
 
 def country_init_1(x):
     init_input = "请输入" + str(x) + "国的"
-    He_lock = input("\n"+ init_input + "核能上限: ")
+    nuclear_lock = input("\n"+ init_input + "核能上限: ")
     ice_lock = input("\n"+ init_input + "可燃冰上限: ")
     creature_lock = input("\n"+ init_input + "生物质能上限: ")
     oil_lock = input("\n" + init_input + "石油上限: ")
     coal_lock = input("\n"+ init_input + "煤上限: ")
-    x = Country(He_lock,ice_lock,creature_lock,oil_lock,coal_lock)
+    x = Country(nuclear_lock,ice_lock,creature_lock,oil_lock,coal_lock)
 
 def country_init_2():
     global Z
@@ -19,6 +19,8 @@ def country_init_2():
 
 def bout(x):
     print("\n" + str(x) + "国")
-    x.deal_energy()
+    x.deal_with_energy()
     x.show()
     line()
+
+    

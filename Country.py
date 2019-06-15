@@ -2,19 +2,19 @@ from Energy import Energy
 
 class Country():
 
-    def __init__(self,He_lock,ice_lock,creature_lock,oil_lock,coal_lock):
+    def __init__(self,nuclear_lock,ice_lock,creature_lock,oil_lock,coal_lock):
         self.gold = 15
         self.energy = 0
         self.pollution = 0
-        self.locks = {"He_lock":int(He_lock),"ice_lock":int(ice_lock),
-                      "reature_lock":int(creature_lock),"coal_lock":int(coal_lock),
+        self.locks = {"nuclear_lock":int(nuclear_lock),"ice_lock":int(ice_lock),
+                      "creature_lock":int(creature_lock),"coal_lock":int(coal_lock),
                       "oil_lock":int(oil_lock)}
 
     def increase(self):
         #每年增加金币
         self.gold += 10
 
-    def deal_energy(self):
+    def deal_with_energy(self):
         #处理能源带来的各属性变化
         self.power = Energy()
         self.power.build_energy()
