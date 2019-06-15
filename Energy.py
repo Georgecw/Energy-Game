@@ -2,7 +2,7 @@ class  Energy():
 
     def __init__(self):
         self.e_list = {"water":[15,9,0,0],"sea":[8,6,0,0],
-                        "He":[12,36,8,1],"ice":[4,8,1,1],
+                        "nuclear":[12,36,8,1],"ice":[4,8,1,1],
                        "creature":[1,1,2,1],
                         "oil":[5,10,2,1],"coal":[2,2,3,1]}
         self.built_list = {}
@@ -18,6 +18,13 @@ class  Energy():
                     self.built_list[self.i_energy] += 1
                 except KeyError:
                     self.built_list[self.i_energy] = 1
-            for key in self.built_list.keys():
-                if self.e_list[key][3] == 0:
-                    self.built_list[key] = 1
+                try:
+                    if self.e_list[self.i_energy][3] == 0:
+                        self.built_list[self.i_energy] = 1
+                except KeyError:
+                    del self.built_list[self.i_energy]
+                    continue
+
+a = Energy()
+a.build_energy()
+print(a.built_list)
