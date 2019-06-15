@@ -1,19 +1,19 @@
 from random import shuffle
 
 def punishment_1(x):
-    print("由于污染过于严重，能量产量减小")
+    print("今年人民对污染极度敏感(如果污染过于严重，能量产量减小)")
     if x.pollution >= 20:
         x.energy -= x.pollution
         x.pollution = 0
 
 def punishment_2(x):
-    print("核电站发生核泄漏，污染增加，能量减少")
+    print("核电站发生核泄漏(如果有核电站，污染增加，能量减少)")
     if x.power.built_list.get("nuclear"):
         x.pollution += 5
         x.energy -= 24
 
 def punishment_3(x):
-    print("由于今年下雨少，海洋运动又不剧烈，水能和风能无产量")
+    print("由于今年下雨少，海洋运动又不剧烈，(水能和风能无产量,如果有的话)")
     if x.power.built_list.get("sea"):
         x.energy -= 6
     if x.power.built_list.get("water"):
