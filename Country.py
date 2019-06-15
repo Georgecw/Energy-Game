@@ -14,7 +14,7 @@ class Country():
         #每年增加金币
         self.gold += 10
 
-    def deal_energy(self):
+    def deal_with_energy(self):
         #处理能源带来的各属性变化
         self.power = Energy()
         self.power.build_energy()
