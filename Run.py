@@ -2,7 +2,7 @@ from Energy import Energy
 from Country import Country
 from game_functions import *
 
-line= lambda : print("----------------------------------------")
+line = lambda : print("----------------------------------------")
 year = 0
 while True:
     year += 1
@@ -14,6 +14,16 @@ while True:
     E.increase()
     print("第" + str(year) + "年")
     line()
-    for i in [Z,M,E]:
-        bout(i)
+    print("Z国")
+    Z.deal_with_energy()
+    Z.show()
+    line()
+    print("M国")
+    M.deal_with_energy()
+    M.show()
+    line()
+    print("E国")
+    E.deal_with_energy()
+    E.show()
+    line()
     input("Please Press <enter>")

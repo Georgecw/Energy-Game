@@ -17,10 +17,4 @@ def country_init_2():
     M = Country(4,4,3,6,3)
     E = Country(4,5,2,5,4)
 
-def bout(x):
-    print("\n" + str(x) + "国")
-    x.deal_with_energy()
-    x.show()
-    line()
-
     

@@ -11,7 +11,7 @@ class  Energy():
         #建造能源
         while True:
             self.i_energy = input('请输入要建造的能源: ')
-            if self.i_energy == 'q':
+            if self.i_energy.lower() == 'q':
                 break
             else:
                 try:
