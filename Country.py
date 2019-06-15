@@ -6,9 +6,9 @@ class Country():
         self.gold = 15
         self.energy = 0
         self.pollution = 0
-        self.locks = {"nuclear_lock":int(He_lock),"ice_lock":int(ice_lock),
-                      "reature_lock":int(creature_lock),"coal_lock":int(coal_lock),
-                      "oil_lock":int(oil_lock)}
+        self.locks = {"nuclear":int(nuclear_lock),"ice":int(ice_lock),
+                      "creature":int(creature_lock),"coal":int(coal_lock),
+                      "oil":int(oil_lock)}
 
     def increase(self):
         #每年增加金币
@@ -19,13 +19,12 @@ class Country():
         self.power = Energy()
         self.power.build_energy()
         for key,value in self.locks.items():
-            kay = key.strip("_lock")
             try:
-                if self.power.built_list[kay] > value:
-                    self.power.built_list[kay] = value
+                if self.power.built_list[key] > value:
+                    self.power.built_list[key] = value
                     print("\n某能源数量超出上限，超出上限部分不产能")
             except KeyError:
-                self.power.built_list[kay] = 0
+                self.power.built_list[key] = 0
         for key , value in self.power.built_list.items():
             if self.power.e_list[key][3] == 1:
                 self.gold -= self.power.e_list[key][0]*value

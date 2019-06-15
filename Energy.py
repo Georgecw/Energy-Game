@@ -11,7 +11,7 @@ class  Energy():
         #建造能源
         while True:
             self.i_energy = input('请输入要建造的能源: ')
-            if self.i_energy == 'q':
+            if self.i_energy.lower() == 'q':
                 break
             else:
                 try:
@@ -24,7 +24,3 @@ class  Energy():
                 except KeyError:
                     del self.built_list[self.i_energy]
                     continue
-
-a = Energy()
-a.build_energy()
-print(a.built_list)
