@@ -35,7 +35,7 @@ class Country():
                 self.pollution += self.power.e_list[key][2]
 
     def show(self):
-        print("\n能量总产量：" + str(self.energy) + "J")
+        print("\n能量总产量：" + str(self.energy) + "KJ")
         print("\n金币剩余: " + str(self.gold) + "G")
         print("\n污染情况：" + str(self.pollution) + "平方千米")
             
