@@ -19,7 +19,7 @@ def country_init_2():
 
 def bout(x):
     print("\n" + str(x) + "国")
-    x.deal_energy()
+    x.deal_with_energy()
     x.show()
     line()
 
