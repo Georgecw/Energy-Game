@@ -1,7 +1,7 @@
 from random import shuffle
 
 def punishment_1(x):
-    print("今年人民对污染极度敏感\n(如果污染过于严重，能量产量减小)")
+    print("今年人民对污染极度敏感\n(如果污染过于严重，能量减小相应污染面积)")
     if x.pollution >= 20:
         x.energy -= x.pollution
         x.pollution = 0

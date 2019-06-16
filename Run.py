@@ -1,7 +1,5 @@
-from Energy import Energy
 from Country import Country
 from game_functions import *
-from punishment import *
 
 line = lambda : print("----------------------------------------")
 year = 0
@@ -17,21 +15,14 @@ while True:
     line()
     if year%2 == 1:
         print("Z国")
-        Z.deal_with_energy()
-        random_punishment(Z)
-        Z.show()
+        bout(Z)
         line()
         print("M国")
-        M.deal_with_energy()
-        random_punishment(M)
-        M.show()
+        bout(M)
         line()
         print("E国")
-        E.deal_with_energy()
-        random_punishment(E)
-        E.show()
+        bout(E)
         line()
-        input("Please Press <enter>")
     elif year%2 == 0:
         for i in [Z,M,E]:
             i.change_country()

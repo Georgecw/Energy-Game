@@ -1,4 +1,6 @@
 from Country import Country
+from punishment import *
+from target import *
 
 def country_init_1(x):
     init_input = "请输入" + str(x) + "国的"
@@ -17,4 +19,11 @@ def country_init_2():
     M = Country(4,4,3,6,3)
     E = Country(4,5,2,5,4)
 
-    
+def bout(x):
+    random_target(x)
+    print("")
+    x.deal_with_energy()
+    print("")
+    random_punishment(x)
+    x.show()
+    input("\nPlease Press <enter>")

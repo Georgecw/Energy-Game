@@ -32,7 +32,7 @@ class Country():
             try:
                 if self.power.built_list[key] > value:
                     self.power.built_list[key] = value
-                    print("\n某能源数量超出上限，超出上限部分不产能")
+                    print("\n某能源数量超出国家储量，超出上限部分无法建造")
             except KeyError:
                 self.power.built_list[key] = 0
         for key , value in self.power.built_list.items():
