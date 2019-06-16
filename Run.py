@@ -5,11 +5,11 @@ from punishment import *
 
 line = lambda : print("----------------------------------------")
 year = 0
+Z = Country(4,6,3,4,3)
+M = Country(4,4,3,6,3)
+E = Country(4,5,2,5,4)
 while True:
     year += 1
-    Z = Country(4,6,3,4,3)
-    M = Country(4,4,3,6,3)
-    E = Country(4,5,2,5,4)
     Z.increase()
     M.increase()
     E.increase()
@@ -31,4 +31,9 @@ while True:
         ramdom_punishment(E)
         E.show()
         line()
+    elif year%2 == 0:
+        for i in [Z,M,E]:
+            i.change_country()
+            i.del_energy()
+            print(i.power.built_list)
     input("Please Press <enter>")
