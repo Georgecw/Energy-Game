@@ -18,22 +18,22 @@ while True:
     if year%2 == 1:
         print("Z国")
         Z.deal_with_energy()
-        ramdom_punishment(Z)
+        random_punishment(Z)
         Z.show()
         line()
         print("M国")
         M.deal_with_energy()
-        ramdom_punishment(M)
+        random_punishment(M)
         M.show()
         line()
         print("E国")
         E.deal_with_energy()
-        ramdom_punishment(E)
+        random_punishment(E)
         E.show()
         line()
+        input("Please Press <enter>")
     elif year%2 == 0:
         for i in [Z,M,E]:
             i.change_country()
             i.del_energy()
-            print(i.power.built_list)
-    input("Please Press <enter>")
+    
