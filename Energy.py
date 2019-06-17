@@ -1,4 +1,5 @@
 class  Energy():
+    "处理能源"
 
     def __init__(self):
         self.e_list = {"water":[15,9,0,0],"sea":[8,6,0,0],
