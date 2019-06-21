@@ -95,7 +95,7 @@ def random_target(x):
     target_lists = [1,2,3]
     shuffle(target_lists)
     target = target_lists[1]
-	do_target(x, number=target)
+    do_target(x, target)
     #if target == 1:
         #target_1(x)
     #elif target == 2:
