@@ -3,11 +3,10 @@ from punishment import *
 from target import *
 import pygame
 
-# 获取参数的变量（非形参）名
+# 获取参数的变量名
 loc = locals()
 
 def get_variable_name(variable) -> str:
-    print loc
     for key in loc:
         if loc[key] == variable:
             return key
