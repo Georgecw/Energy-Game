@@ -1,7 +1,7 @@
 from Energy import Energy
 
 class Country():
-    "处理国家"
+    #"处理国家"
     
     def __init__(self,nuclear_lock,ice_lock,creature_lock,oil_lock,coal_lock):
         #初始化国家属性
