@@ -22,3 +22,13 @@ class Check():
                     self.mouse_x,self.mouse_y = pygame.mouse.get_pos()
                     if self.exit_msg.msg_rect.collidepoint(self.mouse_x,self.mouse_y):
                         pygame.quit()
+
+def check(x):
+    """监视跳转器"""
+    check_events = Check(x)
+    exit_f = check_events.check_exit()
+    cross_f = check_events.check_cross()
+    check_dict = {"exit":exit_f,"cross":cross_f}
+    for key,value in check_dict.items():
+        if str(key) == str(x):
+            value

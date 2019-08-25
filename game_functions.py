@@ -1,7 +1,6 @@
 from Country import Country
 from punishment import *
 from target import *
-from Check_events import Check
 import pygame
 
 def country_init(x):
@@ -31,15 +30,6 @@ def get_variable_name(hh):
     for key in name_dict.keys():
         if name_dict[key] == hh:
             print(key)
-    
-def check(x):
-    """监视跳转器"""
-    check_events = Check(x)
-    exit_f = check_events.check_exit()
-    cross_f = check_events.check_cross()
-    check_dict = {"exit":exit_f,"cross":cross_f}
-    for key,value in check_dict.items():
-        if str(key) == str(x):
-            value
+            
 haha = 55
 get_variable_name(haha)

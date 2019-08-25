@@ -2,6 +2,7 @@ import pygame
 from Msg import Msg
 from Settings import Settings
 import game_functions as gf
+from Check_events import *
 
 class Init():
     """初始化游戏"""
@@ -44,4 +45,4 @@ class Init():
 
     def init_check_start(self):
         #监视开始页面
-        gf.check(self.start_msgs)
+        check(self.start_msgs)
