@@ -47,6 +47,6 @@ def start():
                 if start_msgs[-1].msg_rect.collidepoint(mouse_x,mouse_y):
                     pygame.quit()
                     
-if __name__ == if __name__ == "__main__":
+if __name__ == "__main__":
     start()
 
