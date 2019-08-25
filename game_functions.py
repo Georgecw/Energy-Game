@@ -3,6 +3,17 @@ from punishment import *
 from target import *
 import pygame
 
+# 获取参数的变量（非形参）名
+loc = locals()
+
+def get_variable_name(variable) -> str:
+    print loc
+    for key in loc:
+        if loc[key] == variable:
+            return key
+
+
+
 def country_init(x):
     """自定义你的国家"""
     init_input = "请输入" + str(x) + "国的"
